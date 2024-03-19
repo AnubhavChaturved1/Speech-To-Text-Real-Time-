@@ -1,6 +1,6 @@
 # Real-time Speech Recognition UI
 
-![Real-time Speech Recognition UI](screenshot.png)
+![Real-time Speech Recognition UI](https://github.com/AnubhavChaturved1/Speech-To-Text-Real-Time-/blob/main/Screenshot%202024-03-19%20220329.png)
 
 This project implements a real-time speech recognition interface using HTML, CSS, and JavaScript. It provides a sleek and futuristic user interface suitable for sci-fi themed applications.
 
