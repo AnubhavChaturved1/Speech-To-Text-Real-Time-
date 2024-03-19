@@ -2,7 +2,7 @@
 
 Cheak Out The Demo [LINK](https://real-time-speech-to-text.netlify.app/)
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=anubhavchaturvedi-github&label=Profile%20views&color=0e75b6&style=flat" alt="anubhavchaturvedi-github" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=AnubhavChaturved1&label=Profile%20views&color=0e75b6&style=flat" alt="Views Count" /> </p>
 
 ![Real-time Speech Recognition UI](https://github.com/AnubhavChaturved1/Speech-To-Text-Real-Time-/blob/main/Screenshot%202024-03-19%20220329.png)
 
