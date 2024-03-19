@@ -5,6 +5,11 @@ Cheak Out The Demo [LINK](https://real-time-speech-to-text.netlify.app/)
 ![Real-time Speech Recognition UI](https://github.com/AnubhavChaturved1/Speech-To-Text-Real-Time-/blob/main/Screenshot%202024-03-19%20220329.png)
 
 <a href="https://linkedin.com/in/anubhav-chaturvedi-" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="anubhav-chaturvedi-" height="30" width="40" /></a>
+<a href="https://fb.com/indianyoutuberandsoftwaredevloper" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="indianyoutuberandsoftwaredevloper" height="30" width="40" /></a>
+<a href="https://instagram.com/_anubhav__chaturvedi_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_anubhav__chaturvedi_" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/@anubhav_chaturvedi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@anubhav_chaturvedi" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/ac520/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="ac520" height="30" width="40" /></a>
+</p>
 
 This project implements a real-time speech recognition interface using HTML, CSS, and JavaScript. It provides a sleek and futuristic user interface suitable for sci-fi themed applications.
 
