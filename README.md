@@ -1,8 +1,10 @@
 # Real-time Speech Recognition UI  
 
-Heak Out The Demo [LINK](https://real-time-speech-to-text.netlify.app/)
+Cheak Out The Demo [LINK](https://real-time-speech-to-text.netlify.app/)
 
 ![Real-time Speech Recognition UI](https://github.com/AnubhavChaturved1/Speech-To-Text-Real-Time-/blob/main/Screenshot%202024-03-19%20220329.png)
+
+<h3 align="left">Languages and Tools:</h3>
 
 This project implements a real-time speech recognition interface using HTML, CSS, and JavaScript. It provides a sleek and futuristic user interface suitable for sci-fi themed applications.
 
