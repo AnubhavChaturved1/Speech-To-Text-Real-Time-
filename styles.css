@@ -5,6 +5,12 @@ body {
     font-family: 'Arial', sans-serif; 
 }
 
+h1{
+    color:blue;
+    text-align:center;
+    margin-top:50px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
