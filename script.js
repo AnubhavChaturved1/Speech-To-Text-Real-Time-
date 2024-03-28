@@ -5,7 +5,7 @@ const endBtn = document.getElementById('end');
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.lang = 'en-US';
-recognition.continuous = true;
+recognition.continuous = true; // Set continuous to true for continuous listening
 recognition.interimResults = true;
 
 startBtn.addEventListener('click', () => {
@@ -36,4 +36,5 @@ recognition.onend = function() {
     startBtn.disabled = false;
     endBtn.style.display = 'none'; // Hide end button when recognition ends
     outputText.textContent = 'Click "Start" to begin.';
+    recognition.start(); // Restart recognition when it ends
 };
