@@ -1,40 +1,32 @@
-const outputText = document.getElementById('output');
-const startBtn = document.getElementById('start');
-const endBtn = document.getElementById('end');
+const output = document.getElementById('output');
+const startButton = document.getElementById('startButton');
+let finalTranscript = '';
 
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
 recognition.lang = 'en-US';
-recognition.continuous = true; // Set continuous to true for continuous listening
 recognition.interimResults = true;
 
-startBtn.addEventListener('click', () => {
-    startBtn.disabled = true;
-    endBtn.style.display = 'block'; // Show end button
+startButton.addEventListener('click', () => {
+    finalTranscript = '';
+    output.textContent = '';
     recognition.start();
-    outputText.textContent = '';
+    startButton.textContent = 'Listening...';
 });
 
-endBtn.addEventListener('click', () => {
-    recognition.stop();
-    startBtn.disabled = false;
-    endBtn.style.display = 'none'; // Hide end button again
-    outputText.textContent = '';
+recognition.addEventListener('result', (e) => {
+    const transcript = Array.from(e.results)
+        .map(result => result[0].transcript)
+        .join('');
+
+    if (e.results[0].isFinal) {
+        finalTranscript = transcript + ' ';
+        output.textContent = finalTranscript;
+    } else {
+        output.textContent = transcript;
+    }
 });
 
-recognition.onresult = function(event) {
-    const resultIndex = event.resultIndex;
-    const transcript = event.results[resultIndex][0].transcript;
-    outputText.textContent = `${transcript}`;
-};
-
-recognition.onerror = function(event) {
-    console.error('Speech recognition error:', event.error);
-};
-
-recognition.onend = function() {
-    startBtn.disabled = false;
-    endBtn.style.display = 'none'; // Hide end button when recognition ends
-    outputText.textContent = 'Click "Start" to begin.';
-    recognition.start(); // Restart recognition when it ends
-};
+recognition.addEventListener('end', () => {
+    startButton.textContent = 'Start Listening';
+});
