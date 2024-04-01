@@ -1,32 +1,40 @@
-const output = document.getElementById('output');
-const startButton = document.getElementById('startButton');
-let finalTranscript = '';
+const outputText = document.getElementById('output');
+const startBtn = document.getElementById('start');
+const endBtn = document.getElementById('end');
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+
 recognition.lang = 'en-US';
+recognition.continuous = true; // Set continuous to true for continuous listening
 recognition.interimResults = true;
 
-startButton.addEventListener('click', () => {
-    finalTranscript = '';
-    output.textContent = '';
+startBtn.addEventListener('click', () => {
+    startBtn.disabled = true;
+    endBtn.style.display = 'block'; // Show end button
     recognition.start();
-    startButton.textContent = 'Listening...';
+    outputText.textContent = '';
 });
 
-recognition.addEventListener('result', (e) => {
-    const transcript = Array.from(e.results)
-        .map(result => result[0].transcript)
-        .join('');
-
-    if (e.results[0].isFinal) {
-        finalTranscript = transcript + ' ';
-        output.textContent = finalTranscript;
-    } else {
-        output.textContent = transcript;
-    }
+endBtn.addEventListener('click', () => {
+    recognition.stop();
+    startBtn.disabled = false;
+    endBtn.style.display = 'none'; // Hide end button again
+    outputText.textContent = '';
 });
 
-recognition.addEventListener('end', () => {
-    startButton.textContent = 'Start Listening';
-});
+recognition.onresult = function(event) {
+    const resultIndex = event.resultIndex;
+    const transcript = event.results[resultIndex][0].transcript;
+    outputText.textContent = `${transcript}`;
+};
+
+recognition.onerror = function(event) {
+    console.error('Speech recognition error:', event.error);
+};
+
+recognition.onend = function() {
+    startBtn.disabled = false;
+    endBtn.style.display = 'none'; // Hide end button when recognition ends
+    outputText.textContent = 'Click "Start" to begin.';
+    recognition.start(); // Restart recognition when it ends
+};
